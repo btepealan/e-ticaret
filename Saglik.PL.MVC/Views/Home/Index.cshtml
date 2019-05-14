@@ -1,0 +1,7 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSaglik.cshtml";
+}
+@Html.Action("UrunlerBy", "Home", new { katid = ViewBag.KatID, altid = ViewBag.AltKatID });
+

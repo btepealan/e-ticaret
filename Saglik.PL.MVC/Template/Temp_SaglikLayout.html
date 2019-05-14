@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>e-Ticaret MasterPage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Bootstrap-based, Responsive HTML5 Template, eTicaret masterpage, Asp.Net MVC projesi" />
+    <meta name="keywords" content="asp.net, mvc, eTicaret, bootstrap, sağlık ürünleri, masterpage, doktor ürünleri, tıbbi cihazlar" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/Content/images/favicon_1.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Content/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="/Content/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Fontello CSS -->
+    <link href="/Content/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="/Content/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="/Content/css/animations.css" rel="stylesheet">
+    <link href="/Content/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+
+    <link href="/Content/css/style.css" rel="stylesheet">
+
+    <link href="/Content/css/skins/red.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="/Content/css/custom.css" rel="stylesheet">
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body class="no-trans">
+    <!-- scrollToTop -->
+    <!-- ================ -->
+    @*<div class="scrollToTop"><i class="icon-up-open-big"></i></div>*@
+
+    <!-- page wrapper start -->
+    <!-- ================ -->
+    <div class="page-wrapper">
+
+        <!-- header-top start (Add "dark" class to .header-top in order to enable dark header-top e.g <div class="header-top dark">) -->
+        <!-- ================ -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2  col-sm-6">
+
+                        <!-- header-top-first start -->
+                        <!-- ================ -->
+                        <div class="header-top-first clearfix">
+                            <ul class="social-links clearfix hidden-xs">
+                                <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                                <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                <li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+                                <li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+                                <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+
+                            </ul>
+                            <div class="social-links hidden-lg hidden-md hidden-sm">
+                                <div class="btn-group dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i></button>
+                                    <ul class="dropdown-menu dropdown-animation">
+                                        <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                                        <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                        <li class="youtube"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube-play"></i></a></li>
+                                        <li class="flickr"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+                                        <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="pinterest"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- header-top-first end -->
+
+                    </div>
+                    <div class="col-xs-10 col-sm-6">
+
+                        <!-- header-top-second start -->
+                        <!-- ================ -->
+                        <div id="header-top-second" class="clearfix">
+
+                            <!-- header top dropdowns start -->
+                            <!-- ================ -->
+                            <div class="header-top-dropdown">
+                                <div class="btn-group dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i> Bul</button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                        <li>
+                                            <form role="search" class="search-box">
+
+                                                <div class="form-group has-feedback">
+                                                    <input type="text" class="form-control" placeholder="Search">
+                                                    <i class="fa fa-search form-control-feedback"></i>
+                                                </div>
+
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btn-group dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Login</button>
+                                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+                                        <li>
+                                            <form id="frm" method="post" action="/Account/LoginFrom" class="login-form">
+                                                <div class="form-group has-feedback">
+                                                    <label class="control-label">Username</label>
+                                                    <input name="username" type="text" class="form-control" placeholder="">
+                                                    <i class="fa fa-user form-control-feedback"></i>
+                                                </div>
+                                                <div class="form-group has-feedback">
+                                                    <label class="control-label">Password</label>
+                                                    <input name="password" type="password" class="form-control" placeholder="">
+                                                    <i class="fa fa-lock form-control-feedback"></i>
+                                                </div>
+                                                <button id="btnLogin" type="submit" class="btn btn-group btn-dark btn-sm" onclick="Login()">Log In</button>
+                                                <span>or</span>
+                                                <button id="btnRegister" type="submit" class="btn btn-group btn-default btn-sm" onclick="Register">Sign Up</button>
+                                                <ul>
+                                                    <li><a href="#">Forgot your password?</a></li>
+                                                </ul>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="sepet" class="btn-group dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>Sepet ()</button>
+                                </div>
+
+                            </div>
+                            <!--  header top dropdowns end -->
+
+                        </div>
+                        <!-- header-top-second end -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-top end -->
+        <!-- header start classes:
+        ================ -->
+        <header class="header fixed clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <!-- header-left start -->
+                        <!-- ================ -->
+                        <div class="header-left clearfix">
+
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="/Home/Index"><img id="logo" src="/Content/images/SaglikLogo.png" alt="Sağlık"></a>
+                            </div>
+
+                            <!-- name-and-slogan -->
+                            <div class="site-slogan">
+                                SAĞLIK ÜRÜNLERİ e-Ticaret
+                            </div>
+
+                        </div>
+                        <!-- header-left end -->
+
+                    </div>
+                    <div class="col-md-9">
+
+                        <!-- header-right start -->
+                        <!-- ================ -->
+                        <div class="header-right clearfix">
+
+                            <!-- main-navigation start -->
+                            <!-- ================ -->
+                            <div class="main-navigation animated">
+
+                                <!-- navbar start -->
+                                <!-- ================ -->
+                                <nav class="navbar navbar-default" role="navigation">
+                                    <div class="container-fluid">
+
+                                        <!-- Toggle get grouped for better mobile display -->
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+
+                                        <!-- Collect the nav links, forms, and other content for toggling -->
+                                        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li class="dropdown">
+                                                    <a href="/Home/Index">Anasayfa</a>
+                                                </li>
+                                                <!-- mega-menu start -->
+                                                <li class="dropdown mega-menu">
+                                                    <a href="/Home/Index">Ürünlerimiz</a>
+
+                                                </li>
+                                                <!-- mega-menu end -->
+                                                <li class="dropdown">
+                                                    <a href="/Sepet/Index">Sepet()</a>
+
+                                                </li>
+                                                <!-- mega-menu start -->
+                                                <li class="dropdown mega-menu">
+                                                    <a href="#">SSS</a>
+                                                </li>
+                                                <!-- mega-menu end -->
+                                                <li class="dropdown">
+                                                    <a href="#">Üye Kayıt</a>
+                                                </li>
+                                                <li class="dropdown">
+                                                    <a href="#">İletişim</a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </nav>
+                                <!-- navbar end -->
+
+                            </div>
+                            <!-- main-navigation end -->
+
+                        </div>
+                        <!-- header-right end -->
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- section start -->
+        <!-- ================ -->
+        <div class="section gray-bg text-muted footer-top clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-2">
+
+                        <h3>Kategoriler</h3>
+                        <nav>
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <ul class="nav navbar-nav dropdown-menu" style="display:inline !important; min-width:unset !important">
+                                    <!--...Kategori Menüsü başı...-->
+                                    <li>
+                                        <a href="/Home/Index/" class="dropdown-toggle" data-toggle="dropdown">Kategori Adı</a>
+                                        <ul class="dropdown-menu">
+                                            <!--...Alt Kategoriler başı...-->
+                                            <li>
+                                                <a href="/Home/Index/">Altkategori Adı</a>
+                                            </li>
+                                            <!--...Alt Kategoriler bitişi...-->
+                                        </ul>
+                                    </li>
+
+                                    <!--...Kategori Menüsü bitişi...-->
+                                </ul>
+                            </div>
+                        </nav>
+
+                    </div>
+                    <div class="col-md-10 white-bg">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section end -->
+        <!-- footer start (Add "light" class to #footer in order to enable light footer) -->
+        <!-- ================ -->
+        <footer id="footer">
+
+            <!-- .footer start -->
+            <!-- ================ -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-content">
+                                <div class="logo-footer"><img id="logo-footer" src="/Content/images/logo_red_footer.png" alt=""></div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Lorem ipsum dolor sit amet, consect tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven.</p>
+                                        <ul class="social-links circle">
+                                            <li class="facebook"><a target="_blank" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="twitter"><a target="_blank" href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="googleplus"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+                                            <li class="skype"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+                                            <li class="linkedin"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul class="list-icons">
+                                            <li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
+                                            <li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
+                                            <li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
+                                            <li><i class="fa fa-envelope-o pr-10"></i> info@idea.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="page-about.html" class="link"><span>Read More</span></a>
+                            </div>
+                        </div>
+                        <div class="space-bottom hidden-lg hidden-xs"></div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="footer-content">
+                                <h2>Links</h2>
+                                <nav>
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li><a href="/Home/Index">Anasayfa</a></li>
+                                        <li class="active"><a href="blog-right-sidebar.html">Ürünlerimiz</a></li>
+                                        <li><a href="/Sepet/Index">Sepet</a></li>
+                                        <li><a href="page-about.html">Üye Kayıt</a></li>
+                                        <li><a href="page-contact.html">SSS</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="footer-content">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-bottom hidden-lg hidden-xs"></div>
+                </div>
+            </div>
+            <!-- .footer end -->
+            <!-- .subfooter start -->
+            <!-- ================ -->
+            <div class="subfooter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Copyright ©2019 e-Ticaret by Yazılım-5</p>
+                        </div>
+                        <div class="col-md-6">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <!-- Toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="/Home/Index">Anasayfa</a></li>
+                                        <li><a href="/Home/Index">Ürünlerimiz</a></li>
+                                        <li><a href="/Sepet/Index">Sepet</a></li>
+                                        <li><a href="portfolio-3col.html">Üye Kayıt</a></li>
+                                        <li><a href="page-contact.html">SSS</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .subfooter end -->
+
+        </footer>
+        <!-- footer end -->
+
+    </div>
+    <!-- page-wrapper end -->
+    <!-- JavaScript files placed at the end of the document so the pages load faster
+    ================================================== -->
+    <!-- Jquery and Bootstap core js files -->
+    <script type="text/javascript" src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+
+    <!-- Modernizr javascript -->
+    <script type="text/javascript" src="/Content/modernizr.js"></script>
+
+    <!-- Isotope javascript -->
+    <script type="text/javascript" src="plugins/isotope.pkgd.min.js"></script>
+
+    <!-- Owl carousel javascript -->
+    <script type="text/javascript" src="plugins/owl.carousel.js"></script>
+
+    <!-- Magnific Popup javascript -->
+    <script type="text/javascript" src="/Content/plugins/jquery.magnific-popup.min.js"></script>
+
+    <!-- Appear javascript -->
+    <script type="text/javascript" src="/Content/plugins/jquery.appear.js"></script>
+
+    <!-- Sharrre javascript -->
+    <script type="text/javascript" src="/Content/plugins/jquery.sharrre.js"></script>
+
+    <!-- Count To javascript -->
+    <script type="text/javascript" src="/Content/plugins/jquery.countTo.js"></script>
+
+    <!-- Parallax javascript -->
+    <script src="/Content/plugins/jquery.parallax-1.1.3.js"></script>
+
+    <!-- Contact form -->
+    <script src="/Content/plugins/jquery.validate.js"></script>
+
+    <!-- Initialization of Plugins -->
+    <script type="text/javascript" src="/Content/js/template.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="/Content/js/custom.js"></script>
+    @*</form>*@
+</body>
+@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</html>

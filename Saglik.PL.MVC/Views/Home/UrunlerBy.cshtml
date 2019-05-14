@@ -1,0 +1,38 @@
+﻿@model List<Saglik.Entity.Entity.Urun>
+<div class="masonry-grid-fitrows row grid-space-20">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3 col-sm-6 masonry-grid-item">
+            <div><span class="badge default-bg">%50 indirim</span></div>
+            <h3 class="title"><span>@item.urunAd</span></h3>
+            <div class="overlay-container">
+                <img src="@item.urunResimYolu1" alt="@item.urunAd" title="@item.urunAd">
+                <a href="/Home/UrunDetay/@item.Id" class="overlay small">
+                    <i class="fa fa-plus"></i>
+                    <span>detaylar...</span>
+                </a>
+            </div>
+            <p>Özel kampanyalı kdv dahil fiyatlardır.</p>
+            <div class="listing-item-body clearfix">
+                <span class="price">@string.Format("{0:#,##0.00}", item.urunFiyat)</span>
+                <input type="number" id="Adet_@item.Id" class="pull-right" min="1" max="@item.miktar" value="1" />
+            </div>
+            <input type="image" id="btnSepet" class="pull-right small" src="~/Content/images/Sepet.png" width="128" height="26" onclick="Ekle('@item.Id', $('#Adet_@item.Id').val())" />
+        </div>
+    }
+</div>
+<script type="text/javascript">
+    function Ekle(id, adet) {
+        $.ajax({
+            type: "GET",
+            url: "/Sepet/SepeteEkle",
+            data: { Id: id, Adet: adet },
+            success: function (sonuc) {
+                $('#sepet').html(sonuc);
+            },
+            error: function () {
+                alert('hata');
+            }
+        });
+    }
+</script>
